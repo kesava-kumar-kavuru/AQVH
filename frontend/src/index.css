@@ -1,0 +1,150 @@
+@import "tailwindcss";
+/* Quantum Machine Learning Design System - Professional Financial + Quantum Computing Theme */
+
+@layer base {
+  :root {
+    /* Dark quantum theme */
+    --background: 222 47% 3%;
+    --foreground: 210 100% 95%;
+
+    --card: 225 25% 8%;
+    --card-foreground: 210 100% 95%;
+
+    --popover: 225 25% 8%;
+    --popover-foreground: 210 100% 95%;
+
+    /* Quantum electric blue primary */
+    --primary: 195 100% 60%;
+    --primary-foreground: 222 47% 3%;
+
+    /* Quantum cyan secondary */
+    --secondary: 285 100% 65%;
+    --secondary-foreground: 210 100% 95%;
+
+    /* Professional muted tones */
+    --muted: 225 15% 15%;
+    --muted-foreground: 210 20% 65%;
+
+    /* Financial accent - electric green */
+    --accent: 120 100% 50%;
+    --accent-foreground: 222 47% 3%;
+
+    /* Market warning red */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 210 100% 95%;
+
+    /* Subtle borders and inputs */
+    --border: 225 15% 20%;
+    --input: 225 15% 15%;
+    --ring: 195 100% 60%;
+
+    --radius: 0.75rem;
+
+    /* Quantum gradients */
+    --gradient-quantum: linear-gradient(135deg, hsl(195 100% 60%), hsl(285 100% 65%));
+    --gradient-financial: linear-gradient(90deg, hsl(195 100% 60%), hsl(120 100% 50%));
+    --gradient-neural: linear-gradient(180deg, hsl(285 100% 65%), hsl(195 100% 60%));
+    
+    /* Quantum glow effects */
+    --glow-quantum: 0 0 20px hsl(195 100% 60% / 0.5);
+    --glow-financial: 0 0 15px hsl(120 100% 50% / 0.4);
+    --glow-neural: 0 0 25px hsl(285 100% 65% / 0.3);
+    
+    /* Professional shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(195 100% 60% / 0.2);
+    --shadow-card: 0 4px 20px -4px hsl(225 25% 8% / 0.6);
+    
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: box-shadow 0.3s ease;
+  }
+
+  /* Enhanced dark mode for quantum theme */
+  .dark {
+    --background: 222 47% 2%;
+    --foreground: 210 100% 98%;
+  }
+
+  /* Sidebar CSS variables */
+  :root {
+    --sidebar-background: 225 25% 6%;
+    --sidebar-foreground: 210 100% 95%;
+    --sidebar-primary: 195 100% 60%;
+    --sidebar-primary-foreground: 222 47% 3%;
+    --sidebar-accent: 225 15% 15%;
+    --sidebar-accent-foreground: 210 100% 95%;
+    --sidebar-border: 225 15% 20%;
+    --sidebar-ring: 195 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+    
+  }
+  
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: radial-gradient(ellipse at top, hsl(225 25% 8%) 0%, hsl(222 47% 3%) 100%);
+    min-height: 100vh;
+  }
+
+  /* Quantum animations */
+  @keyframes quantum-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  @keyframes data-flow {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  @keyframes neural-glow {
+    0%, 100% { box-shadow: var(--glow-quantum); }
+    50% { box-shadow: var(--glow-neural); }
+  }
+
+  /* Custom utilities */
+  .quantum-glow {
+    box-shadow: var(--glow-quantum);
+    transition: var(--transition-glow);
+  }
+
+  .quantum-glow:hover {
+    box-shadow: var(--glow-neural);
+  }
+
+  .financial-glow {
+    box-shadow: var(--glow-financial);
+  }
+
+  .gradient-quantum {
+    background: var(--gradient-quantum);
+  }
+
+  .gradient-financial {
+    background: var(--gradient-financial);
+  }
+
+  .gradient-neural {
+    background: var(--gradient-neural);
+  }
+
+  .animate-quantum-pulse {
+    animation: quantum-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-data-flow {
+    animation: data-flow 3s linear infinite;
+  }
+
+  .animate-neural-glow {
+    animation: neural-glow 4s ease-in-out infinite;
+  }
+}
